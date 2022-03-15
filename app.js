@@ -4,10 +4,11 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 var con = my_sql.createConnection({
-  host: "database-1.cejascgnweg9.us-east-1.rds.amazonaws.com",
+  host: "database-2.cejascgnweg9.us-east-1.rds.amazonaws.com",
+  port: '3306',
   user: "admin",
   password: "AllahisOne1#",
-  database: '-'
+  database: 'my_db'
 });
 const app = express();
 
@@ -18,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(cors());
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Credentials', true);
