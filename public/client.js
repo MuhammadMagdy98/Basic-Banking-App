@@ -9,7 +9,7 @@ async function getText(response) {
 
 async function getCustomers() {
   try {
-    let response = await fetch("http://localhost:3001/customersData");
+    let response = await fetch("https://banking-app101.herokuapp.com/customersData");
 
     if (response.status === 200) {
       let data = getText(response);

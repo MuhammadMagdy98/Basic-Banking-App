@@ -23,7 +23,7 @@ async function sendMoney(from, to, balance) {
       referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       body: JSON.stringify(data),
     };
-    let response = await (await fetch("http://localhost:3001/send", options)).text();
+    let response = await (await fetch("https://banking-app101.herokuapp.com/send", options)).text();
     return response;
   } catch (err) {
     console.log(err);
@@ -31,7 +31,7 @@ async function sendMoney(from, to, balance) {
 }
 async function getCustomers() {
   try {
-    let response = await fetch("http://localhost:3001/customersData");
+    let response = await fetch("https://banking-app101.herokuapp.com/customersData");
 
     if (response.status === 200) {
       let data = getText(response);
