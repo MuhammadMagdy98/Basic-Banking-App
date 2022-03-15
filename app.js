@@ -21,6 +21,9 @@ app.use(cors());
 
 const port = process.env.PORT || 3001;
 
+
+app.use(express.static('public'))
+
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Credentials', true);
   res.header('Access-Control-Allow-Origin', "*");
