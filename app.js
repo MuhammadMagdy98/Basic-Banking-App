@@ -61,10 +61,12 @@ app.get('/transactionHisory', (req, res) => {
   });
 });
 app.post('/send', (req, res) => {
-  const fromName = req.body.from;
-  const balance = req.body.balance;
-  const toName = req.body.to;
+  let fromName = req.body.from;
+  let balance = req.body.balance;
+  let toName = req.body.to;
 
+  fromName = fromName.split(' ')[0];
+  toName = toName.split(' ')[0];
   if (fromName === toName) {
     res.status(200).send(`You can't transfer to yourself.`);
     return;
