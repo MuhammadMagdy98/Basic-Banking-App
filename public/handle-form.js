@@ -61,7 +61,7 @@ function viewCustomers(customersData) {
   let transferMoney = `<label> From </label> <select id = "transfter-money__from"class="transfter-money__from">`;
 
   for (let i = 0; i < customersData.length; i++) {
-    transferMoney += `<option> ${customersData[i].name} </option>`;
+    transferMoney += `<option> ${customersData[i].name}   ${customersData[i].balance}  </option>`;
   }
 
   transferMoney += `</select>`;
@@ -69,7 +69,7 @@ function viewCustomers(customersData) {
   <select id = "transfter-money__to" class="transfter-money__to">`;
 
   for (let i = 0; i < customersData.length; i++) {
-    transferMoney += `<option> ${customersData[i].name} </option>`;
+    transferMoney += `<option> ${customersData[i].name}  ${customersData[i].balance} </option>`;
   }
   transferMoney += `</select>`;
   transferMoney += `<label> Balance </label>
