@@ -54,7 +54,7 @@ function viewCustomers(customersData) {
 
   </button>`;
   let transferMoney = `<label> From </label> <select class="transfter-money__from"`;
-  table += "<tr>";
+  table += "<tr class = \"table-header\">";
   table += `<th> ID </th>`;
   table += `<th> Name </th>`;
   table += `<th> Balance </th>`;

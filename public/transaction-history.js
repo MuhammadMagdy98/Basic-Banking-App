@@ -34,7 +34,7 @@ data
     const elem = document.getElementById("container");
     let table = "<table>";
   
-    table += "<tr>";
+    table += "<tr class=\"table-header\">";
     table += `<th> ID </th>`;
     table += `<th> Sender Name </th>`;
     table += `<th> Receiver Name </th>`;

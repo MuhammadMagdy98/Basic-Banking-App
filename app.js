@@ -2,13 +2,14 @@ const my_sql = require('mysql');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const dotenv = require('dotenv').config();
 
 var con = my_sql.createConnection({
-  host: "database-2.cejascgnweg9.us-east-1.rds.amazonaws.com",
-  port: '3306',
-  user: "admin",
-  password: "AllahisOne1#",
-  database: 'my_db'
+  host: process.env.host,
+  port: process.env.port,
+  user: process.env.user,
+  password: process.env.password,
+  database: process.env.database
 });
 const app = express();
 
