@@ -16,3 +16,5 @@
 - NodeJS
 - Express JS
 - MySql 
+- AWS
+
