@@ -65,7 +65,7 @@ app.get("/transactionHisory", (req, res) => {
 function validateBalance(balance) {
 
   if (balance.length === 0) {
-    return { validBalance: false, msg: `Balance can't be empty` };
+    return { validBalance: false, msg: `Invalid Balance` };
   }
   if (!(Number(balance) == balance)) {
     return { validBalance: false, msg: `Balance is not a number` };
