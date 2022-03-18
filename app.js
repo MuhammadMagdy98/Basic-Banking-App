@@ -194,6 +194,12 @@ async function handlePromises(fromName, toName, balance) {
     return res;
   }
 
+  if (res) {
+    if (fromName == toName) {
+      return {valid: false, msg: `You can't transfer to yourself`};
+    }
+  }
+
   res = await updateCustomer(fromName, toName, balance);
 
   return res;
